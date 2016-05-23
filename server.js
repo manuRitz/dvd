@@ -1,0 +1,1 @@
+﻿'use strict';var express = require('express');var app = express();app.use(express.static('public'));var port = process.env.PORT || 8000;app.listen(port, function () {    //require('./document')(app.router.mounts);});require('./routes')(app);module.exports.app = app;

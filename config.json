@@ -1,0 +1,4 @@
+{
+  "dbPath": "mongodb://localhost/dvd",
+  "port": 8000
+}

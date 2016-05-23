@@ -1,0 +1,1 @@
+﻿{  "name": "DVDAdministration",  "description": "",  "engines": {    "node": "5.9.1"  },  "main": "server.js",  "dependencies": {    "mongoose": "latest",    "express": "latest",    "cli-table": "latest",    "frisby": "latest",    "jasmine-node": "latest"  },  "repository": {    "type": "git",    "url": "https://github.com/manuRitz/dvd.git"  }}
