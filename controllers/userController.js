@@ -14,7 +14,6 @@ function UserController() {
      * @returns {void}
      */
     this.postUser = function (req, res) {
-        console.log(req.body);
         var user = new User({
             username: req.body.username,
             password: req.body.password
