@@ -1,0 +1,151 @@
+var frisby = require('frisby');
+
+var url = 'http://localhost:8000';
+
+frisby.create('POST category')
+    .post(url + '/category', {
+        shortcut: 'TT',
+        category: 'TEST'
+
+    })
+    .expectStatus(200)
+    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+    .auth('test', 'test')
+    .expectJSONTypes('', {
+        id: String,
+        category: String,
+        shortcut: String
+    })
+    .expectJSON('', {
+        category: 'TEST',
+        shortcut: 'TT'
+    })
+    //.inspectJSON()
+    .afterJSON(function (json) {
+        frisby.create('GET categories')
+            .get(url + '/category')
+            .expectStatus(200)
+            .expectHeader('Content-Type', 'application/json; charset=utf-8')
+            .expectJSONTypes('?', {
+                id: String,
+                category: String,
+                shortcut: String
+            })
+            .expectJSON('?', {
+                id: json.id,
+                category: 'TEST',
+                shortcut: 'TT'
+            })
+            .toss();
+
+        frisby.create('GET category by id')
+            .get(url + '/category/' + json.id)
+            .expectStatus(200)
+            .expectHeader('Content-Type', 'application/json; charset=utf-8')
+            .expectJSONTypes('', {
+                id: String,
+                category: String,
+                shortcut: String
+            })
+            .expectJSON('', {
+                id: json.id,
+                category: 'TEST',
+                shortcut: 'TT'
+            })
+            .toss();
+
+        frisby.create('PUT category by id')
+            .put(url + '/category/' + json.id, {
+                shortcut: 'T'
+            })
+            .expectStatus(200)
+            .expectHeader('Content-Type', 'application/json; charset=utf-8')
+            .auth('test', 'test')
+            .expectJSONTypes('', {
+                id: String,
+                category: String,
+                shortcut: String
+            })
+            .expectJSON('', {
+                id: json.id,
+                category: 'TEST',
+                shortcut: 'T'
+            })
+            .afterJSON(function (json) {
+                frisby.create('DELETE category by id')
+                    .delete(url + '/category/' + json.id)
+                    .expectStatus(200)
+                    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+                    .auth('test', 'test')
+                    .expectJSONTypes('', {
+                        success: Boolean
+                    })
+                    .expectJSON('', {
+                        success: true
+                    })
+                    .toss();
+            })
+            .toss();
+    })
+    .toss();
+
+frisby.create('error GET category by id')
+    .get(url + '/category/1111111111111111111111')
+    .expectStatus(400)
+    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+    .expectJSONTypes('', {
+        error: String
+    })
+    .expectJSON('', {
+        error: 'UNKNOWN_OBJECT'
+    })
+    .toss();
+
+frisby.create('error POST category missing category and shortcut')
+    .post(url + '/category')
+    .expectStatus(400)
+    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+    .auth('test', 'test')
+    .expectJSONTypes('', {
+        error: String,
+        validation: {
+            category: String,
+            shortcut: String
+        }
+    })
+    .expectJSON('', {
+        error: 'VALIDATION_ERROR',
+        validation: {
+            category: 'MISSING',
+            shortcut: 'MISSING'
+        }
+    })
+    .toss();
+
+frisby.create('error PUT category by false id ')
+    .put(url + '/category/111111111111111111111', {
+        shortcut: 'AA'
+    })
+    .expectStatus(400)
+    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+    .auth('test', 'test')
+    .expectJSONTypes('', {
+        error: String
+    })
+    .expectJSON('', {
+        error: 'UNKNOWN_OBJECT'
+    })
+    .toss();
+
+frisby.create('error DELETE category by false id ')
+    .delete(url + '/category/111111111111111111111')
+    .expectStatus(400)
+    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+    .auth('test', 'test')
+    .expectJSONTypes('', {
+        error: String
+    })
+    .expectJSON('', {
+        error: 'UNKNOWN_OBJECT'
+    })
+    .toss();

@@ -88,12 +88,8 @@ function CategoryController() {
      * @returns {void}
      */
     this.postCategory = function (req, res) {
-        var newCategory = new Category(req.query);
-
-
-
+        var newCategory = new Category(req.body);
         newCategory.save(function (err, category) {
-            //console.log(err.toString());
             if (err) {
                 res.status(400).send(errorHandling(err));
             } else {
@@ -110,7 +106,7 @@ function CategoryController() {
      * @returns {void}
      */
     this.putCategory = function (req, res) {
-        mongoose.model('category').findOneAndUpdate({'_id': req.params.id}, {$set: req.query}, {runValidators: true}, function (err, category) {
+        mongoose.model('category').findOneAndUpdate({'_id': req.params.id}, {$set: req.body}, {runValidators: true}, function (err, category) {
             if (category === null || err) {
                 if (category === null || err.name === 'CastError') {
                     res.status(400).send({'error': 'UNKNOWN_OBJECT'});
