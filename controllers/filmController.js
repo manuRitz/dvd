@@ -111,10 +111,11 @@ function FilmController() {
                 if (film === null || err.name === 'CastError') {
                     res.status(400).send({'error': 'UNKNOWN_OBJECT'});
                 } else {
+                    console.log(err);
                     res.status(400).send(errorHandling(err));
                 }
             } else {
-                Category.findOne({'_id': req.params.id}, function (err, data) {
+                Film.findOne({'_id': req.params.id}, function (err, data) {
                     res.send(data);
                 });
             }
