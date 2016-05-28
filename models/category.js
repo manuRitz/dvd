@@ -6,7 +6,7 @@ var Schema = mongoose.Schema;
 
 var categorySchema = new Schema({
     category: {type: String, required: true, unique: true},
-    shortcut: {type: String, required: true, unique: true}
+    shortcut: {type: String, required: true, uppercase: true, unique: true}
 }, {
     versionKey: false,
     toJSON: {
@@ -16,5 +16,9 @@ var categorySchema = new Schema({
         }
     }
 });
+
+categorySchema.path('shortcut').validate(function (shortcut) {
+    return !shortcut.match(/[^a-zA-Z]/i) && shortcut.length <= 2;
+}, 'letter with length 2 or lower');
 
 module.exports = mongoose.model('category', categorySchema);

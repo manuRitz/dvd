@@ -122,6 +122,103 @@ frisby.create('error POST category missing category and shortcut')
     })
     .toss();
 
+frisby.create('error POST category invalid shortcut. Not length of 2 or lower.')
+    .post(url + '/category', {
+        category: 'shortcut not length of 2 or lower',
+        shortcut: 'AAA'
+    })
+    .expectStatus(400)
+    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+    .auth('test', 'test')
+    .expectJSONTypes('', {
+        error: String,
+        validation: {
+            shortcut: String
+        }
+    })
+    .expectJSON('', {
+        error: 'VALIDATION_ERROR',
+        validation: {
+            shortcut: 'INVALID'
+        }
+    })
+    .toss();
+
+frisby.create('error POST category invalid shortcut. Only letters')
+    .post(url + '/category', {
+        category: 'shortcut not length of 2 or lower',
+        shortcut: '4a'
+    })
+    .expectStatus(400)
+    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+    .auth('test', 'test')
+    .expectJSONTypes('', {
+        error: String,
+        validation: {
+            shortcut: String
+        }
+    })
+    .expectJSON('', {
+        error: 'VALIDATION_ERROR',
+        validation: {
+            shortcut: 'INVALID'
+        }
+    })
+    .toss();
+
+frisby.create('POST category for error POST category duplicated test')
+    .post(url + '/category', {
+        category: 'DUPLICATED TEST',
+        shortcut: 'DD'
+    })
+    .expectStatus(200)
+    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+    .auth('test', 'test')
+    .expectJSONTypes('', {
+        id: String,
+        category: String,
+        shortcut: String
+    })
+    .expectJSON('', {
+        category: 'DUPLICATED TEST',
+        shortcut: 'DD'
+    })
+    //.inspectJSON()
+    .afterJSON(function (json_category) {
+        frisby.create('error POST category duplicated')
+            .post(url + '/category', {
+                category: 'DUPLICATED TEST',
+                shortcut: 'DD'
+            })
+            .expectStatus(400)
+            .expectHeader('Content-Type', 'application/json; charset=utf-8')
+            .auth('test', 'test')
+            .expectJSONTypes('', {
+                error: String,
+                validation: String
+            })
+            .expectJSON('', {
+                error: 'VALIDATION_ERROR',
+                validation: 'DUPLICATED'
+            })
+            .afterJSON(function (json) {
+                frisby.create('DELETE category for error POST category duplicated test')
+                    .delete(url + '/category/' + json_category.id)
+                    .expectStatus(200)
+                    .expectHeader('Content-Type', 'application/json; charset=utf-8')
+                    .auth('test', 'test')
+                    .expectJSONTypes('', {
+                        success: Boolean
+                    })
+                    .expectJSON('', {
+                        success: true
+                    })
+                    .toss();
+            })
+            .toss();
+    })
+    .toss();
+
 frisby.create('error PUT category by false id ')
     .put(url + '/category/111111111111111111111', {
         shortcut: 'AA'

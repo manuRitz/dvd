@@ -45,8 +45,7 @@ function CategoryController() {
     function errorHandling(err) {
         var ValidationErrors = {
             REQUIRED: 'required',
-            NOTNUMBER: 'user defined',
-            ENUMNOTVALID: 'enum'
+            NOTLETTER: 'user defined'
         };
 
         var errMessage = {
@@ -55,7 +54,6 @@ function CategoryController() {
         };
 
         if (err.name === 'MongoError') {
-            //console.log(err.toJSON());
             errMessage.validation = 'DUPLICATED';
         }
 
@@ -67,10 +65,7 @@ function CategoryController() {
                     case ValidationErrors.REQUIRED:
                         errMessage.validation[errName] = 'MISSING';
                         break;
-                    case ValidationErrors.ENUMNOTVALID:
-                        errMessage.validation[errName] = 'INVALID';
-                        break;
-                    case ValidationErrors.NOTNUMBER:
+                    case ValidationErrors.NOTLETTER:
                         errMessage.validation[errName] = 'INVALID';
                         break;
                 }
