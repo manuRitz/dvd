@@ -1,6 +1,6 @@
 var frisby = require('frisby');
 
-var url = 'http://localhost:8000';
+var url = 'http://localhost:8000/api';
 
 frisby.create('POST category for film test')
     .post(url + '/category', {

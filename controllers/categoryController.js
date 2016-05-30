@@ -16,9 +16,19 @@ function CategoryController() {
      * @returns {void}
      */
     this.getCategories = function (req, res) {
-        mongoose.model('category').find(function (err, category) {
-            res.send(category);
-        })
+        if (req.body.alphabet) {
+            mongoose.model('category').find({
+                category: new RegExp('^' + '[' + req.body.alphabet + ']', 'i')
+            }, function (err, category) {
+                res.send(category);
+            })
+        } else {
+            mongoose.model('category').find(function (err, category) {
+                res.send(category);
+            })
+        }
+
+
     };
 
     /**

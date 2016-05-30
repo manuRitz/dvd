@@ -1,1 +1,33 @@
-﻿{  "name": "DVDAdministration",  "description": "",  "engines": {    "node": "5.9.1"  },  "main": "server.js",  "dependencies": {    "mongoose": "latest",    "express": "latest",    "cli-table": "latest",    "frisby": "latest",    "jasmine-node": "latest",    "bcrypt-nodejs": "latest",    "passport": "latest",    "passport-http": "latest",    "body-parser": "latest"  },  "repository": {    "type": "git",    "url": "https://github.com/manuRitz/dvd.git"  }}
+{
+  "name": "DVDAdministration",
+  "description": "",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "server.js",
+  "dependencies": {
+    "bcrypt-nodejs": "latest",
+    "body-parser": "latest",
+    "cli-table": "latest",
+    "cookie-parser": "^1.4.3",
+    "debug": "^2.2.0",
+    "express": "latest",
+    "frisby": "latest",
+    "jade": "^1.11.0",
+    "jasmine-node": "latest",
+    "mongoose": "latest",
+    "morgan": "^1.7.0",
+    "passport": "latest",
+    "passport-http": "latest",
+    "static-favicon": "^2.0.0-alpha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manuRitz/dvd.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-sass": "^2.3.1"
+  }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ShowTrackr</title>
+    <link rel="icon" type="image/png" href="favicon.png"/>
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheets/sb-admin.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap.min.css"/>
+
+</head>
+<body>
+<div id="wrapper">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/$"><i class="fa fa-fw fa-home"></i>DVD-Verwaltung</a>
+            </div>
+            <div class="top-nav notification-row">
+                <ul class="nav pull-right top-menu">
+                    <!--{% if user.is_authenticated %}-->
+                    <!--<li class="dropdown">-->
+                    <!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
+                    <!--<i class="fa fa-user"></i>-->
+                    <!--<span class="username">{{ user.username }}</span>-->
+                    <!--<b class="caret"></b>-->
+                    <!--</a>-->
+                    <!--<ul class="dropdown-menu extended logout">-->
+                    <!--<li>-->
+                    <!--<a href="/logout"><i class="fa fa-sign-out"></i> Logout</a>-->
+                    <!--</li>-->
+                    <!--</ul>-->
+                    <!--</li>-->
+                    <!--{% else %}-->
+                    <li>
+                        <a class="navbar-brand" href="/login">
+                            <span class="username"><i class="fa fa-sign-in"></i> Login</span>
+                        </a>
+                    </li>
+                    <!--{% endif %}-->
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li data-match-route="/search">
+                        <a href="/search"><i class="fa fa-fw fa-search"></i> Film Suche</a>
+                    </li>
+                    <li data-match-route="/addfilm">
+                        <a href="/addfilm"><i class="fa fa-fw fa-plus-square-o"></i> Film Eingabe</a>
+                    </li>
+                    <li data-match-route="/deletefilm">
+                        <a href="/deletefilm"><i class="fa fa-fw fa-minus-square-o"></i> Film Löschen</a>
+                    </li>
+                    <li data-match-route="/addcategory">
+                        <a href="/addcategory"><i class="fa fa-fw fa-plus-square"></i> Kategorie
+                            Eingabe</a>
+                    </li>
+                    <li data-match-route="/deletecategory">
+                        <a href="/deletecategory"><i class="fa fa-fw fa-plus-square"></i> Kategorie
+                            Löschen</a>
+                    </li>
+                    <li data-match-route="/upload">
+                        <a href="/upload"><i class="fa fa-fw fa-upload"></i> Upload</a>
+                    </li>
+                    <li data-match-route="/exportcsv">
+                        <a href="/exportcsv"><i class="fa fa-fw fa-download"></i> Download</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div ng-view></div>
+</div>
+
+<script src="vendor/angular.js"></script>
+<script src="vendor/angular-strap.js"></script>
+<script src="vendor/angular-strap.tpl.js"></script>
+<script src="vendor/angular-messages.js"></script>
+<script src="vendor/angular-resource.js"></script>
+<script src="vendor/angular-route.js"></script>
+<script src="vendor/angular-cookies.js"></script>
+<script src="vendor/moment.js"></script>
+<script src="app.js"></script>
+<script src="controllers/main.js"></script>
+<script src="services/category.js"></script>
+<script src="services/film.js"></script>
+<script src="controllers/addcategory.js"></script>
+</body>
+</html>
