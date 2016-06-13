@@ -10,12 +10,12 @@
     <link href="stylesheets/style.css" rel="stylesheet">
     <link rel="stylesheet" href="stylesheets/font-awesome-4.6.3/css/font-awesome.min.css">
     <link rel="stylesheet" href="stylesheets/sb-admin.css">
-    <link rel="stylesheet" type="text/css" href="stylesheets/bootstrap/bootstrap.min.css"/>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div id="wrapper">
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <nav ng-controller="NavbarCtrl" class="navbar navbar-inverse navbar-fixed-top" role="navigation" bs-navbar>
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -28,26 +28,26 @@
             </div>
             <div class="top-nav notification-row">
                 <ul class="nav pull-right top-menu">
-                    <!--{% if user.is_authenticated %}-->
-                    <!--<li class="dropdown">-->
-                    <!--<a data-toggle="dropdown" class="dropdown-toggle" href="#">-->
-                    <!--<i class="fa fa-user"></i>-->
-                    <!--<span class="username">{{ user.username }}</span>-->
-                    <!--<b class="caret"></b>-->
-                    <!--</a>-->
-                    <!--<ul class="dropdown-menu extended logout">-->
-                    <!--<li>-->
-                    <!--<a href="/logout"><i class="fa fa-sign-out"></i> Logout</a>-->
-                    <!--</li>-->
-                    <!--</ul>-->
-                    <!--</li>-->
-                    <!--{% else %}-->
-                    <li>
+
+                    <li class="dropdown" ng-if="currentUser">
+                        <a data-toggle="dropdown" class="dropdown-toggle" style="color: #9d9d9d;">
+                            <i class="fa fa-user"></i>
+                            <span class="username" ng-bind="currentUser.username"></span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="javascript:void(0)" ng-click="logout()"><i class="fa fa-sign-out"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li ng-if="!currentUser">
                         <a class="navbar-brand" href="/login">
                             <span class="username"><i class="fa fa-sign-in"></i> Login</span>
                         </a>
                     </li>
-                    <!--{% endif %}-->
+
                 </ul>
             </div>
 
@@ -96,5 +96,10 @@
 <script src="services/category.js"></script>
 <script src="services/film.js"></script>
 <script src="controllers/addcategory.js"></script>
+<script src="controllers/login.js"></script>
+<script src="directives/repeatPassword.js"></script>
+<script src="controllers/signup.js"></script>
+<script src="services/auth.js"></script>
+<script src="controllers/navbar.js"></script>
 </body>
 </html>

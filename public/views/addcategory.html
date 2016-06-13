@@ -1,22 +1,40 @@
-<div class="container">
-    <div class="panel panel-default">
-        <div class="panel-heading">Add Category</div>
-        <div class="panel-body">
-            <form class="form" method="post" ng-submit="addCategory()" name="addForm">
-                <div class="form-group"
-                     ng-class="{ 'has-success' : addForm.category.$valid && addForm.category.$dirty && addForm.shortcut.$valid && addForm.shortcut.$dirty, 'has-error' : addForm.category.$invalid && addForm.category.$dirty && addForm.shortcut.$invalid && addForm.shortcut.$dirty }">
-                    <input class="form-control" type="text" name="category" ng-model="category"
-                           placeholder="Category name" required autofocus>
-                    <input class="form-control" type="text" name="shortcut" ng-model="shortcut"
-                           placeholder="Shortcut for category" required autofocus>
+<div id="page-wrapper">
+    <div class="container-fluid">
 
-                    <div class="help-block text-danger" ng-if="addForm.shortcut.$dirty"
-                         ng-messages="addForm.shortcut.$error">
-                        <div ng-message="required">TV show name is required.</div>
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Kategorie hinzufügen
+                    <small>Angabe eines Kategorienamens und des dazugehörigen Kürzels</small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Add Category</div>
+                    <div class="panel-body">
+                        <form class="form" method="post" ng-submit="addCategory()" name="addForm">
+                            <div class="form-group"
+                                 ng-class="{ 'has-success' : addForm.category.$valid && addForm.category.$dirty && addForm.shortcut.$valid && addForm.shortcut.$dirty, 'has-error' : addForm.category.$invalid && addForm.category.$dirty && addForm.shortcut.$invalid && addForm.shortcut.$dirty }">
+                                <input class="form-control" type="text" name="category" ng-model="category"
+                                       placeholder="Category name" required autofocus>
+                                <input class="form-control" type="text" name="shortcut" ng-model="shortcut"
+                                       placeholder="Shortcut for category" required autofocus>
+
+                                <div class="help-block text-danger" ng-if="addForm.shortcut.$dirty"
+                                     ng-messages="addForm.shortcut.$error">
+                                    <div ng-message="required">Category and shortcut is required</div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="submit" ng-disabled="addForm.$invalid">Add</button>
+                        </form>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit" ng-disabled="addForm.$invalid">Add</button>
-            </form>
+            </div>
         </div>
     </div>
 </div>
+
+

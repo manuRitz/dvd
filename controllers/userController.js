@@ -13,7 +13,7 @@ function UserController() {
      * @param {response} res response
      * @returns {void}
      */
-    this.postUser = function (req, res) {
+    this.signupUser = function (req, res) {
         var user = new User({
             username: req.body.username,
             password: req.body.password
@@ -27,6 +27,16 @@ function UserController() {
             }
         });
 
+    };
+
+    this.loginUser = function (req, res) {
+        res.cookie('user', JSON.stringify(req.user));
+        res.send(req.user);
+    };
+
+    this.logoutUser = function (req, res) {
+        req.logout();
+        res.send(200);
     };
 
     /**
