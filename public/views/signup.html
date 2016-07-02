@@ -7,10 +7,9 @@
                 <div class="panel-body">
                     <h2 class="text-center">Sign up</h2>
 
-                    <div class="form-group"
-                         ng-class="{ 'has-success' : signupForm.email.$valid && signupForm.email.$dirty, 'has-error' : signupForm.email.$invalid && signupForm.email.$dirty }">
-                        <input class="form-control input-lg" type="email" id="email"
-                               name="email" ng-model="email" placeholder="Email" required
+                    <div class="form-group">
+                        <input class="form-control input-lg" type="" id="username"
+                               name="email" ng-model="email" placeholder="Benutzername" required
                                autofocus>
 
                         <div class="help-block text-danger" ng-if="signupForm.email.$dirty"
