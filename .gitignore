@@ -1,0 +1,12 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+
+.env
+.idea/
+config.json
+
+node_modules
+
+

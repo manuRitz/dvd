@@ -5,7 +5,7 @@
  * @returns {UserController} return userController
  */
 function UserController() {
-    var User = require('../models/user');
+    var User = require('../dao/models/user');
 
     /**
      * create new user

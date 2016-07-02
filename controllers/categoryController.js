@@ -5,9 +5,9 @@
  * @returns {CategoryController} return categoryController
  */
 function CategoryController() {
-    var Category = require('../models/category');
+    var Category = require('../dao/models/category');
 
-    var mongoose = require('../db').mongoose;
+    var mongoose = require('../dao/db').mongoose;
 
     /**
      * get all categories

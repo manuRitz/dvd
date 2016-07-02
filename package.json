@@ -1,13 +1,22 @@
 {
   "name": "DVDAdministration",
+  "version": "0.0.1",
   "description": "",
+  "scripts": {
+    "start": "node server.js | bunyan -o short",
+    "test": "eslint . && mocha",
+    "nodemon": "nodemon -x \"npm start\"",
+    "tdd": "nodemon -x \"npm test\""
+  },
   "engines": {
     "node": "5.9.1"
   },
   "main": "server.js",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.4.1",
     "body-parser": "^1.15.1",
+    "bunyan": "^1.8.1",
     "cli-table": "latest",
     "cookie-parser": "^1.4.3",
     "debug": "^2.2.0",
@@ -16,8 +25,10 @@
     "frisby": "latest",
     "jade": "^1.11.0",
     "jasmine-node": "latest",
+    "joi": "^8.4.2",
     "mongoose": "latest",
     "morgan": "^1.7.0",
+    "nconf": "^0.8.4",
     "passport": "^0.3.2",
     "passport-http": "latest",
     "passport-local": "^1.0.0",

@@ -5,9 +5,9 @@
  * @returns {FilmController} return filmController
  */
 function FilmController() {
-    var Film = require('../models/film');
+    var Film = require('../dao/models/film');
 
-    var mongoose = require('../db').mongoose;
+    var mongoose = require('../dao/db').mongoose;
 
     /**
      * get all films
