@@ -10,7 +10,7 @@ frisby.create('POST category')
     })
     .expectStatus(200)
     .expectHeader('Content-Type', 'application/json; charset=utf-8')
-    .auth('test', 'test')
+    //.auth('test', 'test')
     .expectJSONTypes('', {
         id: String,
         category: String,
@@ -20,7 +20,6 @@ frisby.create('POST category')
         category: 'TEST',
         shortcut: 'TT'
     })
-    //.inspectJSON()
     .afterJSON(function (json) {
         frisby.create('GET categories')
             .get(url + '/category')
@@ -60,7 +59,7 @@ frisby.create('POST category')
             })
             .expectStatus(200)
             .expectHeader('Content-Type', 'application/json; charset=utf-8')
-            .auth('test', 'test')
+            //.auth('test', 'test')
             .expectJSONTypes('', {
                 id: String,
                 category: String,
@@ -76,12 +75,16 @@ frisby.create('POST category')
                     .delete(url + '/category/' + json.id)
                     .expectStatus(200)
                     .expectHeader('Content-Type', 'application/json; charset=utf-8')
-                    .auth('test', 'test')
+                    //.auth('test', 'test')
                     .expectJSONTypes('', {
-                        success: Boolean
+                        id: String,
+                        category: String,
+                        shortcut: String
                     })
                     .expectJSON('', {
-                        success: true
+                        id: json.id,
+                        category: 'TEST',
+                        shortcut: 'T'
                     })
                     .toss();
             })
@@ -91,13 +94,13 @@ frisby.create('POST category')
 
 frisby.create('error GET category by id')
     .get(url + '/category/1111111111111111111111')
-    .expectStatus(400)
+    .expectStatus(404)
     .expectHeader('Content-Type', 'application/json; charset=utf-8')
     .expectJSONTypes('', {
         error: String
     })
     .expectJSON('', {
-        error: 'UNKNOWN_OBJECT'
+        error: 'NOT_FOUND'
     })
     .toss();
 
@@ -173,7 +176,7 @@ frisby.create('POST category for error POST category duplicated test')
     })
     .expectStatus(200)
     .expectHeader('Content-Type', 'application/json; charset=utf-8')
-    .auth('test', 'test')
+    //.auth('test', 'test')
     .expectJSONTypes('', {
         id: String,
         category: String,
@@ -190,9 +193,9 @@ frisby.create('POST category for error POST category duplicated test')
                 category: 'DUPLICATED TEST',
                 shortcut: 'DD'
             })
-            .expectStatus(400)
+            .expectStatus(404)
             .expectHeader('Content-Type', 'application/json; charset=utf-8')
-            .auth('test', 'test')
+            //.auth('test', 'test')
             .expectJSONTypes('', {
                 error: String,
                 validation: String
@@ -206,14 +209,17 @@ frisby.create('POST category for error POST category duplicated test')
                     .delete(url + '/category/' + json_category.id)
                     .expectStatus(200)
                     .expectHeader('Content-Type', 'application/json; charset=utf-8')
-                    .auth('test', 'test')
+                    //.auth('test', 'test')
                     .expectJSONTypes('', {
-                        success: Boolean
+                        id: String,
+                        category: String,
+                        shortcut: String
                     })
                     .expectJSON('', {
-                        success: true
+                        id: json.id,
+                        category: 'DUPLICATED TEST',
+                        shortcut: 'DD'
                     })
-                    .toss();
             })
             .toss();
     })
@@ -223,26 +229,26 @@ frisby.create('error PUT category by false id ')
     .put(url + '/category/111111111111111111111', {
         shortcut: 'AA'
     })
-    .expectStatus(400)
+    .expectStatus(404)
     .expectHeader('Content-Type', 'application/json; charset=utf-8')
     .auth('test', 'test')
     .expectJSONTypes('', {
         error: String
     })
     .expectJSON('', {
-        error: 'UNKNOWN_OBJECT'
+        error: 'NOT_FOUND'
     })
     .toss();
 
 frisby.create('error DELETE category by false id ')
     .delete(url + '/category/111111111111111111111')
-    .expectStatus(400)
+    .expectStatus(404)
     .expectHeader('Content-Type', 'application/json; charset=utf-8')
     .auth('test', 'test')
     .expectJSONTypes('', {
         error: String
     })
     .expectJSON('', {
-        error: 'UNKNOWN_OBJECT'
+        error: 'NOT_FOUND'
     })
     .toss();

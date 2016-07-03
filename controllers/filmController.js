@@ -5,9 +5,9 @@
  * @returns {FilmController} return filmController
  */
 function FilmController() {
-    var Film = require('../dao/models/film');
+    var Film = require('./models/film');
 
-    var mongoose = require('../dao/db').mongoose;
+    var mongoose = require('./db').mongoose;
 
     /**
      * get all films
@@ -111,7 +111,7 @@ function FilmController() {
                 if (film === null || err.name === 'CastError') {
                     res.status(400).send({'error': 'UNKNOWN_OBJECT'});
                 } else {
-                    console.log(err);
+                    //console.log(err);
                     res.status(400).send(errorHandling(err));
                 }
             } else {
