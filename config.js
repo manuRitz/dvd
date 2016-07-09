@@ -1,6 +1,7 @@
 const nconf = require('nconf');
 const Joi = require('joi');
 const pkg = require('./package.json');
+const _ = require('lodash');
 
 nconf
     .argv()
@@ -19,7 +20,7 @@ const config = {
     VERSION: pkg.version,
     SERVER_HOST_NAME: nconf.get('SERVER_HOST_NAME'),
     PORT: nconf.get('PORT'),
-    //LOG_LEVEL: nconf.get('LOG_LEVEL'),
+    LOG_LEVEL: nconf.get('LOG_LEVEL'),
     MONGO_URI: nconf.get('MONGO_URI')
 };
 
@@ -29,8 +30,8 @@ function validateConfig(obj) {
         VERSION: Joi.string().required(),
         SERVER_HOST_NAME: Joi.string(),
         PORT: Joi.number().integer(),
-        //LOG_LEVEL: Joi.string(),
-        MONGO_URI: Joi.string()
+        LOG_LEVEL: Joi.string(),
+        MONGO_URI: Joi.string().required()
     }, {
         abortEarly: false
     });
@@ -38,9 +39,11 @@ function validateConfig(obj) {
     if (result.error !== null) {
         console.log('invalid or missing config settings:');
 
-        result.error.details(function (err) {
+        _.each(result.error.details, function (err) {
             console.log('-', err.message, '--> please set', err.path);
         });
+
+        progress.exit(1);
     }
 }
 

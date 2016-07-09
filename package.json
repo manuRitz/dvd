@@ -1,5 +1,5 @@
 {
-  "name": "DVDAdministration",
+  "name": "dvd-verwaltung",
   "version": "0.0.1",
   "description": "",
   "scripts": {
@@ -26,8 +26,8 @@
     "jade": "^1.11.0",
     "jasmine-node": "latest",
     "joi": "^8.4.2",
+    "lodash": "^4.13.1",
     "mongoose": "^4.5.3",
-    "morgan": "^1.7.0",
     "nconf": "^0.8.4",
     "passport": "^0.3.2",
     "passport-http": "latest",
