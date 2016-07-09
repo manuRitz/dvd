@@ -1,5 +1,6 @@
 const restify = require('restify');
 const Promise = require('bluebird');
+const path = require('path');
 
 const log = require('../logger').default;
 const httpLog = require('../logger').http;
@@ -97,7 +98,7 @@ class RestApi {
         var server = this.server = createServer(config.NAME);
         var app = this.app = new Application(config);
 
-        server.get('/', respond(function () {
+        server.get('/api', respond(function () {
             return app.getInfo();
         }));
 
@@ -119,6 +120,17 @@ class RestApi {
 
         server.del('/api/category/:id', respond(function (req) {
             return app.deleteCategory(req.params.id);
+        }));
+
+        var publicPath = path.resolve(__dirname, '..', 'public');
+
+        server.get('/', restify.serveStatic({
+            'directory': publicPath,
+            'default': 'index.html'
+        }));
+
+        server.get(/\/\/?.*/, restify.serveStatic({
+            directory: publicPath
         }));
     }
 
