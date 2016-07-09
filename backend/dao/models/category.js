@@ -21,4 +21,6 @@ categorySchema.path('shortcut').validate(function (shortcut) {
     return !shortcut.match(/[^a-zA-Z]/i) && shortcut.length <= 2;
 }, 'letter with length 2 or lower');
 
-module.exports = mongoose.model('category', categorySchema);
+module.exports = function (mongoose) {
+    return mongoose.model('Category', categorySchema);
+};

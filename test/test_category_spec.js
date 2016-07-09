@@ -219,7 +219,7 @@ frisby.create('POST category for error POST category duplicated test')
                         id: json.id,
                         category: 'DUPLICATED TEST',
                         shortcut: 'DD'
-                    })
+                    });
             })
             .toss();
     })

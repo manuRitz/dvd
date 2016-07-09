@@ -9,7 +9,7 @@
     "tdd": "nodemon -x \"npm test\""
   },
   "engines": {
-    "node": "5.9.1"
+    "node": "6.3.0"
   },
   "main": "server.js",
   "dependencies": {
@@ -20,8 +20,6 @@
     "cli-table": "latest",
     "cookie-parser": "^1.4.3",
     "debug": "^2.2.0",
-    "express": "^4.13.4",
-    "express-session": "^1.13.0",
     "frisby": "latest",
     "jade": "^1.11.0",
     "jasmine-node": "latest",
@@ -32,6 +30,7 @@
     "passport": "^0.3.2",
     "passport-http": "latest",
     "passport-local": "^1.0.0",
+    "restify": "^4.1.1",
     "static-favicon": "^2.0.0-alpha"
   },
   "repository": {

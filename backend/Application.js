@@ -1,12 +1,16 @@
-'use strict';
-
 const Promise = require('bluebird');
-//const Joi = require('joi');
 
 const config = require('../config');
-const db = require('./dao/database');
+const Database = require('./dao/Database');
 
 class Application {
+
+    constructor(config) {
+        this.config = config;
+
+        this.db = new Database(config);
+    }
+
     getInfo() {
         return Promise.resolve({
             name: config.NAME,
@@ -15,25 +19,24 @@ class Application {
     }
 
     getCategories(query) {
-        return db.category.get(query);
+        return this.db.findCategory(query);
     }
 
     getCategoryById(id) {
-        return db.category.getById(id);
+        return this.db.getCategory(id);
     }
 
     createCategory(body) {
-        return db.category.create(body);
+        return this.db.createCategory(body);
     }
 
     updateCategory(id, body) {
-        return db.category.update(id, body);
+        return this.db.updateCategory(id, body);
     }
 
-    deleteCategory (id) {
-        return db.category.delete(id);
+    deleteCategory(id) {
+        return this.db.deleteCategory(id);
     }
 }
 
 module.exports = Application;
-
