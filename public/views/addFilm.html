@@ -1,0 +1,45 @@
+<div id="page-wrapper">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Film hinzufügen
+                    <small></small>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Film hinzufügen</div>
+                    <div class="panel-body">
+                        <form class="form" method="post" ng-submit="addFilm()" name="addForm">
+                            <div class="form-group"
+                                 ng-class="{ 'has-success' : addForm.film.$valid && addForm.film.$dirty && addForm.category.$valid && addForm.category.$dirty, 'has-error' : addForm.film.$invalid && addForm.film.$dirty && addForm.category.$invalid && addForm.category.$dirty }">
+
+                                <input class="form-control" type="text" name="title" ng-model="title"
+                                       placeholder="Titel" required autofocus>
+
+                                <select class="form-control" ng-model="category" ng-options="category.id as category.category for category in categories">
+                                </select>
+
+                                <input class="form-control" type="text" name="number" ng-model="number"
+                                       placeholder="Film Nummer" required autofocus>
+
+                                <div class="help-block text-danger" ng-if="addForm.shortcut.$dirty"
+                                     ng-messages="addForm.shortcut.$error">
+                                    <div ng-message="required">Filmname und KLKategorie sind erforderlich</div>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary" type="submit" ng-disabled="addForm.$invalid">Add</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
