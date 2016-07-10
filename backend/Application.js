@@ -18,7 +18,7 @@ class Application {
         });
     }
 
-    getCategories(query) {
+    findCategories(query) {
         return this.db.findCategory(query);
     }
 
@@ -37,6 +37,27 @@ class Application {
     deleteCategory(id) {
         return this.db.deleteCategory(id);
     }
+
+    findFilm(query) {
+        return this.db.findFilm(query);
+    }
+
+    getFilmById(id) {
+        return this.db.getFilm(id);
+    }
+
+    createFilm(body) {
+        return this.db.createFilm(body);
+    }
+
+    updateFilm(id, body) {
+        return this.db.updateFilm(id, body);
+    }
+
+    deleteFilm(id) {
+        return this.db.deleteFilm(id);
+    }
+
 }
 
 module.exports = Application;

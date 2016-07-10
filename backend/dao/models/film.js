@@ -1,5 +1,3 @@
-'use strict';
-
 var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
@@ -19,4 +17,6 @@ var filmSchema = new Schema({
     }
 });
 
-module.exports = mongoose.model('film', filmSchema);
+module.exports = function (mongoose) {
+    return mongoose.model('Film', filmSchema);
+};

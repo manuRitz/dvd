@@ -103,7 +103,7 @@ class RestApi {
         }));
 
         server.get('/api/category', respond(function (req) {
-            return app.getCategories(req.params);
+            return app.findCategories(req.params);
         }));
 
         server.post('/api/category', respond(function (req) {
@@ -120,6 +120,26 @@ class RestApi {
 
         server.del('/api/category/:id', respond(function (req) {
             return app.deleteCategory(req.params.id);
+        }));
+
+        server.get('/api/film', respond(function (req) {
+            return app.findFilm(req.params);
+        }));
+
+        server.post('/api/film', respond(function (req) {
+            return app.createFilm(req.body);
+        }));
+
+        server.get('/api/film/:id', respond(function (req) {
+            return app.getFilmById(req.params.id);
+        }));
+
+        server.put('/api/film/:id', respond(function (req) {
+            return app.updateFilm(req.params.id, req.body);
+        }));
+
+        server.del('/api/film/:id', respond(function (req) {
+            return app.deleteFilm(req.params.id);
         }));
 
         var publicPath = path.resolve(__dirname, '..', 'public');
