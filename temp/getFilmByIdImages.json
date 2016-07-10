@@ -1,0 +1,47 @@
+// https://api.themoviedb.org/3/movie/87101/images?api_key={key}&language=de
+/*
+* get image:
+* http://image.tmdb.org/t/p/w1000/5EaHy2Xqdk4COmsdH2ujK21UwHV.jpg
+*/
+{
+  "id": 87101,
+  "backdrops": [],
+  "posters": [
+    {
+      "aspect_ratio": 0.666666666666667,
+      "file_path": "/5EaHy2Xqdk4COmsdH2ujK21UwHV.jpg",
+      "height": 3000,
+      "iso_639_1": "de",
+      "vote_average": 5.38461538461539,
+      "vote_count": 2,
+      "width": 2000
+    },
+    {
+      "aspect_ratio": 0.666666666666667,
+      "file_path": "/iV8nZ6XxRPc9VlocJPBAgLi4nS.jpg",
+      "height": 2100,
+      "iso_639_1": "de",
+      "vote_average": 5.21645021645022,
+      "vote_count": 3,
+      "width": 1400
+    },
+    {
+      "aspect_ratio": 0.666666666666667,
+      "file_path": "/wcDpR9qjJjDO9freISmQkyZUBev.jpg",
+      "height": 1500,
+      "iso_639_1": "de",
+      "vote_average": 0,
+      "vote_count": 0,
+      "width": 1000
+    },
+    {
+      "aspect_ratio": 0.666666666666667,
+      "file_path": "/jtkIu3yYr0d2HfNAYlvc7Mi8KW7.jpg",
+      "height": 1500,
+      "iso_639_1": "de",
+      "vote_average": 0,
+      "vote_count": 0,
+      "width": 1000
+    }
+  ]
+}

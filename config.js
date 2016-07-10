@@ -21,7 +21,8 @@ const config = {
     SERVER_HOST_NAME: nconf.get('SERVER_HOST_NAME'),
     PORT: nconf.get('PORT'),
     LOG_LEVEL: nconf.get('LOG_LEVEL'),
-    MONGO_URI: nconf.get('MONGO_URI')
+    MONGO_URI: nconf.get('MONGO_URI'),
+    THEMOVIEDB_KEY: nconf.get('THEMOVIEDB_KEY')
 };
 
 function validateConfig(obj) {
@@ -31,7 +32,8 @@ function validateConfig(obj) {
         SERVER_HOST_NAME: Joi.string(),
         PORT: Joi.number().integer(),
         LOG_LEVEL: Joi.string(),
-        MONGO_URI: Joi.string().required()
+        MONGO_URI: Joi.string().required(),
+        THEMOVIEDB_KEY: Joi.string().required()
     }, {
         abortEarly: false
     });

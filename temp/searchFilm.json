@@ -1,0 +1,410 @@
+// https://api.themoviedb.org/3/search/multi?api_key={key}&query=Terminator&language=de&page=1
+{
+  "page": 1,
+  "results": [
+    {
+      "poster_path": "/5EaHy2Xqdk4COmsdH2ujK21UwHV.jpg",
+      "adult": false,
+      "overview": "Im Jahr 2029 kämpft der Rebellenanführer John Connor gegen die Übermacht des Skynet-Maschinenimperiums. Er schickt seinen loyalen Freund Kyle Reese zurück ins Jahr 1983, um seine Mutter Sarah Connor vor einem Killer-Roboter zu beschützen und so die Zukunft der Menschheit sicherzustellen. Doch als Kyle Reese im Los Angeles der 1980er ankommt, muss er feststellen, dass die erwartete Vergangenheit nicht mehr existiert. Sarahs Eltern wurden von einem durch die Zeit gereisten Terminator ermordet, ein Android des Modells T-800 hatte das 9-jährige Mädchen danach beschützt und großgezogen. Kyle erklärt Sarah, was in der Zukunft geschehen wird, doch sie wehrt sich entschieden gegen die Vorstellung, dass ihre Geschichte schon vorherbestimmt ist – und nimmt den Kampf mit Gegnern wie dem T-1000 auf…",
+      "release_date": "2015-06-23",
+      "original_title": "Terminator Genisys",
+      "genre_ids": [
+        878,
+        28,
+        53,
+        12
+      ],
+      "id": 87101,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Terminator Genisys",
+      "backdrop_path": "/bIlYH4l2AyYvEysmS2AOfjO7Dn8.jpg",
+      "popularity": 14.697336,
+      "vote_count": 2181,
+      "video": false,
+      "vote_average": 5.97
+    },
+    {
+      "poster_path": "/9xo4emkHgJZLyzfQ7vY0GssDydL.jpg",
+      "adult": false,
+      "overview": "Im Jahr 2018 hat die Apokalypse längst ihren Lauf genommen und die Welt, wie wir sie kennen, existiert nicht mehr. Die Menschen werden von den Maschinen Skynets geknechtet und nur ein kleiner Teil unter der Führung von John Connor führt erbittert Widerstand gegen die Riege der Terminatoren. Unterstützung erhält die Gruppe um Connor von dem mysteriösen Fremden Marcus Wright.",
+      "release_date": "2009-05-20",
+      "original_title": "Terminator Salvation",
+      "genre_ids": [
+        18,
+        28,
+        53,
+        878
+      ],
+      "id": 534,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Terminator - Die Erlösung",
+      "backdrop_path": "/nQtWfidhGPJwncmL3hrNDDEJUAr.jpg",
+      "popularity": 4.957543,
+      "vote_count": 1501,
+      "video": false,
+      "vote_average": 5.81
+    },
+    {
+      "poster_path": "/2TGZ1oyfrzpl0wVfE8VUYl6QLA8.jpg",
+      "adult": false,
+      "overview": "Ein Cyborg aus der Zukunft wird auf eine tödliche Mission in die heutige Gegenwart geschickt. Er soll Sarah Connor töten, eine junge Frau, die eine entscheidende Rolle für die Zukunft der Menschheit spielen wird. Sie hat nur eine Chance, Kyle Reese, ein Freiheitskämpfer, der ebenfalls aus der Zukunft kommt.",
+      "release_date": "1984-10-26",
+      "original_title": "The Terminator",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "id": 218,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Terminator",
+      "backdrop_path": "/6yFoLNQgFdVbA8TZMdfgVpszOla.jpg",
+      "popularity": 4.724258,
+      "vote_count": 2287,
+      "video": false,
+      "vote_average": 7.05
+    },
+    {
+      "poster_path": "/58grbQ6gOBgf949bxeVsDdphsQL.jpg",
+      "adult": false,
+      "overview": "Zehn Jahre nach der Terrorherrschaft des ersten Terminators kehrt ein neuer Killer-Cyborg auf die Erde zurück. Der Auftrag des T-1000 lautet: John Connor muss sterben. Der zwölfjährige John ist der einzige, der eines fernen Tages die Menschheit vor der Übernahme der Weltherrschaft durch die Maschinen retten könnte. Doch die Rebellen aus der Zukunft sind wachsam. Zum Schutz für John entsenden sie einen umprogrammierten Terminator der alten Generation, den T-800, auf die Erde.",
+      "release_date": "1991-07-01",
+      "original_title": "Terminator 2: Judgment Day",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "id": 280,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Terminator 2 - Tag der Abrechnung",
+      "backdrop_path": "/d9AqtruwS8nljKjL5aYzM42hQJr.jpg",
+      "popularity": 5.670425,
+      "vote_count": 2517,
+      "video": false,
+      "vote_average": 7.44
+    },
+    {
+      "poster_path": "/5nYdYwQpFUAfe2bpFaFeFTf8BEP.jpg",
+      "adult": false,
+      "overview": "Zehn Jahre sind vergangen, seit mit John Connors Hilfe der Weltuntergang verhindert und die Menschheit vor ihrer Zerstörung bewahrt wurde. Heute, im Alter von 25 Jahren, führt Connor ein Leben am Rande der Gesellschaft – ohne Wohnung, Kreditkarten, Mobiltelefon und ohne Job. Es gibt keinen Hinweis auf seine Existenz: er hinterlässt keine Spur, die von “Skynet” verfolgt werden könnte – dem hoch entwickelten Netzwerk von Maschinen, die einst versucht hatten, ihn zu töten und Krieg gegen die Menschen zu führen. Bis der T-X aus dem Schatten der Zukunft tritt: Skynets bisher am höchsten entwickelte, tödliche Menschmaschine, ebenso sexy wie gnadenlos. T-X soll vollenden, was ihr Vorgänger T-1000 nicht ausführen konnte. Connors einzige Überlebenschance ist der Terminator, die legendäre, einst auf ihn angesetzte Killermaschine. Ihnen bleibt nur wenig Zeit: Sie müssen T-X ausschalten – sonst ist die Apokalypse nicht aufzuhalten.",
+      "release_date": "2003-07-02",
+      "original_title": "Terminator 3: Rise of the Machines",
+      "genre_ids": [
+        28,
+        53,
+        878
+      ],
+      "id": 296,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Terminator 3 - Rebellion der Maschinen",
+      "backdrop_path": "/tMhvihszpLbOjj7mJSTW7bgQbIc.jpg",
+      "popularity": 4.159335,
+      "vote_count": 1155,
+      "video": false,
+      "vote_average": 5.8
+    },
+    {
+      "poster_path": "/6N6mRb1edVpKtYR7QZriymM5RXu.jpg",
+      "popularity": 2.37827,
+      "id": 433,
+      "overview": "Sarah Connor und ihr Sohn John versuchen im Jahr 1999 unter falschem Namen ein normales Leben zu führen, nachdem sie die Computerfirma Cyberdyne  zerstört haben, und somit den Tag des Jüngsten Gerichts abgewendet zu  haben glauben. Dabei müssen sie nicht nur vor den Behörden auf der Hut  sein, die sie als psychopathische Terroristen verfolgen, sondern auch  vor weiteren Maschinenwesen aus der Zukunft.",
+      "backdrop_path": "/olnnGqqPKNP5REU01X64JbY22Y3.jpg",
+      "vote_average": 7.11,
+      "media_type": "tv",
+      "first_air_date": "2008-01-13",
+      "origin_country": [
+        "US"
+      ],
+      "genre_ids": [
+        10765
+      ],
+      "original_language": "en",
+      "vote_count": 41,
+      "name": "Terminator: The Sarah Connor Chronicles",
+      "original_name": "Terminator: The Sarah Connor Chronicles"
+    },
+    {
+      "poster_path": "/uPnPoFpjp9mGql84TPCkrdeLqKB.jpg",
+      "adult": false,
+      "overview": "2059: ein Bürgerkrieg hat die USA zerstört. Rebellengruppen kämpfen gegen die totalitäre Republik. Um die Schlacht zu entscheiden, schickt die Regierung LIA, einen tödlichen Androiden. Doch die Rebellen können LIA überwältigen und sie umprogrammieren, ihr Emotionen und Gefühle “beibringen”. Wird LIA endgültig die Seiten wechseln?",
+      "release_date": "2013-06-14",
+      "original_title": "Perfect: Android Rising",
+      "genre_ids": [
+        18,
+        878
+      ],
+      "id": 282659,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Terminator Rising",
+      "backdrop_path": "/nQk6qnJgHe2xzT8OQs7Z9yfHWpf.jpg",
+      "popularity": 1.01485,
+      "vote_count": 6,
+      "video": false,
+      "vote_average": 4.25
+    },
+    {
+      "poster_path": "/ls7BqOyOusaFSjegFPOOnjymaII.jpg",
+      "adult": false,
+      "overview": "Die göttliche Macht des Ninja Imeriums wird durch eine dreiteilge goldene Statue, den GOLDEN NINJA WARRIOR, symbolisiert. Diese Figur verleiht dem besitzer eine mysteriöse Superkraft und macht ihm zum Meister aller Ninjas, dem NINJA TERMINATOR. Eines Nachts brechen 3 gutausgebildete Ninja Kämpfer ihren Schwur und entwenden gewaltsam die Statue. Zwei Jahre später erfahren sie von dem mysteriösen Tod ihres Anführers TOMASHI.\r Der dritte Teil der wertvollen Statue ist verschwunden. HARRY bittet sein beseten Freung JAGUAR WONG, einen Interpol Agenten und Elite Ninja um seine Hilfe. Doch WONG verfolgt noch ander Ziele, er will BARON , den grössten Rauschgifthändler der fernen ostens überführen. WONG ahnt nicht das auch BARON einen Teil der Figur besitzt.In einem blutigen Kampf auf Leben und Tod wird die Frage nach dem Ninja Terminator entschieden.....",
+      "release_date": "1985-01-01",
+      "original_title": "Ninja Terminator",
+      "genre_ids": [
+        28
+      ],
+      "id": 40027,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Ninja Terminator",
+      "backdrop_path": "/vKxXCxrOJp0e3kS4J84RO7JKe6x.jpg",
+      "popularity": 1.00855,
+      "vote_count": 2,
+      "video": false,
+      "vote_average": 6
+    },
+    {
+      "poster_path": "/cAx9ycP3YS6UZbJwLyO0Liiid9x.jpg",
+      "adult": false,
+      "overview": "Julie und Jay zwei Cops aus L.A., haben den gefährlichen Auftrag, Marsalas nach Afrika zu überführen. Er soll gegen den international gesuchten Schwerverbrecher, Frauenhändler und Anführer eines  Goldschmuggel-Syndikates, Alex Gatelee, aussagen. Bereits während der Fahrt ins Gefängnis sind Gatelees Männer hinter ihnen her. Sie wollen Marsalas um jeden Preis. Nur durch ihren übermenschlichen Kampfeinsatz können Julie und Jay die Männer überwältigen. Aber Gatelee gibt nicht auf und kidnappt Julie, um Marsalas Freilassung zu erpressen. Nun ist Jay gezwungen, allein gegen das Killer-Kommando zu kämpfen.",
+      "release_date": "1993-06-30",
+      "original_title": "Terminator Woman",
+      "genre_ids": [
+        28,
+        53
+      ],
+      "id": 55459,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Terminator Woman",
+      "backdrop_path": "/1XUlcxkhD9kEJqeloQgZ6dgCwaM.jpg",
+      "popularity": 1.003413,
+      "vote_count": 2,
+      "video": false,
+      "vote_average": 2
+    },
+    {
+      "poster_path": "/8J5QEyXlnwsIyjiEHqNo9bos1th.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "1992-12-31",
+      "original_title": "Korean Terminator",
+      "genre_ids": [
+        878,
+        28
+      ],
+      "id": 290688,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Korean Terminator",
+      "backdrop_path": null,
+      "popularity": 1.000273,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    },
+    {
+      "poster_path": "/fM3m4EU09ZQ4akjcedAPDiN4vqh.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "1996-10-09",
+      "original_title": "Alien Terminator",
+      "genre_ids": [
+        878,
+        27
+      ],
+      "id": 133360,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Alien Terminator",
+      "backdrop_path": null,
+      "popularity": 1.000146,
+      "vote_count": 2,
+      "video": false,
+      "vote_average": 2
+    },
+    {
+      "poster_path": "/qDNIpx3Tjm6Bx1kyqL6ZXBXNFNF.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "1989-12-12",
+      "original_title": "Russian Terminator",
+      "genre_ids": [
+        28
+      ],
+      "id": 86223,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Russian Terminator",
+      "backdrop_path": "/2DBLJXPOn5zSmU5H6ctee0PPz69.jpg",
+      "popularity": 1.000005,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    },
+    {
+      "poster_path": "/oyUrhAggD7y1h2D7PEQm0AkIRFt.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "1989-06-10",
+      "original_title": "Pembalasan ratu pantai selatan",
+      "genre_ids": [
+        10769,
+        27,
+        28
+      ],
+      "id": 61904,
+      "media_type": "movie",
+      "original_language": "id",
+      "title": "Pembalasan ratu pantai selatan",
+      "backdrop_path": "/aHl3Fc7C1NQhAzThqhybs2Yzw7X.jpg",
+      "popularity": 1.000324,
+      "vote_count": 3,
+      "video": false,
+      "vote_average": 5.67
+    },
+    {
+      "poster_path": "/wRu8bpVkWuVvZVU9MVbZd6ZTXGs.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "2016-03-22",
+      "original_title": "Batman vs. Terminator",
+      "genre_ids": [],
+      "id": 390375,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Batman vs. Terminator",
+      "backdrop_path": null,
+      "popularity": 1.02218,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    },
+    {
+      "poster_path": "/oLUHYgC2jHZJ8ap9FMrLacyrYaG.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "1990-08-22",
+      "original_title": "Shocking Dark",
+      "genre_ids": [
+        28,
+        878
+      ],
+      "id": 66664,
+      "media_type": "movie",
+      "original_language": "it",
+      "title": "Shocking Dark",
+      "backdrop_path": "/n9zt7jS3VZgOiGFHbxYKWdsqDnD.jpg",
+      "popularity": 1.088641,
+      "vote_count": 3,
+      "video": false,
+      "vote_average": 2.83
+    },
+    {
+      "poster_path": "/2BZnKpz3Sq9FzqE1K1eVGbAZvdP.jpg",
+      "adult": false,
+      "overview": "",
+      "release_date": "2013-11-01",
+      "original_title": "Terminator the Second",
+      "genre_ids": [
+        28,
+        878,
+        53
+      ],
+      "id": 233341,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Terminator the Second",
+      "backdrop_path": "/v3hhlrg6OiS0HasLEO7mJjtwBK3.jpg",
+      "popularity": 1.003546,
+      "vote_count": 2,
+      "video": false,
+      "vote_average": 4.25
+    },
+    {
+      "poster_path": null,
+      "popularity": 1.004286,
+      "id": 7148,
+      "overview": "",
+      "backdrop_path": null,
+      "vote_average": 0,
+      "media_type": "tv",
+      "first_air_date": "2008-11-08",
+      "origin_country": [
+        "TW"
+      ],
+      "genre_ids": [
+        9648,
+        10765,
+        18,
+        35
+      ],
+      "original_language": "en",
+      "vote_count": 0,
+      "name": "Mysterious Incredible Terminator",
+      "original_name": "Mysterious Incredible Terminator"
+    },
+    {
+      "poster_path": null,
+      "adult": false,
+      "overview": "",
+      "release_date": "2017-05-19",
+      "original_title": "Untitled Terminator 2",
+      "genre_ids": [],
+      "id": 290859,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Untitled Terminator 2",
+      "backdrop_path": null,
+      "popularity": 1.009917,
+      "vote_count": 3,
+      "video": false,
+      "vote_average": 9.33
+    },
+    {
+      "poster_path": null,
+      "adult": false,
+      "overview": "",
+      "release_date": "2018-06-29",
+      "original_title": "Untitled Terminator 3",
+      "genre_ids": [],
+      "id": 290861,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Untitled Terminator 3",
+      "backdrop_path": null,
+      "popularity": 1.006009,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    },
+    {
+      "poster_path": null,
+      "adult": false,
+      "overview": "",
+      "release_date": "1991-06-20",
+      "original_title": "Boyong Mañalac, Hoodlum Terminator",
+      "genre_ids": [
+        18,
+        28,
+        80
+      ],
+      "id": 353425,
+      "media_type": "movie",
+      "original_language": "en",
+      "title": "Boyong Mañalac, Hoodlum Terminator",
+      "backdrop_path": null,
+      "popularity": 1.000014,
+      "vote_count": 0,
+      "video": false,
+      "vote_average": 0
+    }
+  ],
+  "total_results": 40,
+  "total_pages": 2
+}
