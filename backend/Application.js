@@ -38,6 +38,10 @@ class Application {
         return this.db.deleteCategory(id);
     }
 
+    getCategoryCount(category_id) {
+        return this.db.getCategoryCount(category_id);
+    }
+
     findFilm(query) {
         return this.db.findFilm(query);
     }

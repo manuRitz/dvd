@@ -31,7 +31,7 @@
                                 <i class='fa fa-comments fa-5x'></i>
                             </div>
                             <div class='col-xs-9 text-right'>
-                                <div class='huge' data-ng-init="filmCountByCategory(category)">{{ count }}</div>
+                                <div class='huge' ng-init="count = filmCountByCategory(category.id)">{{ count.count }}</div>
                                 <div>{{ category.category }}</div>
                             </div>
                         </div>

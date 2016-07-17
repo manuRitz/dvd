@@ -1,5 +1,5 @@
 angular.module('MyApp')
-    .controller('MainCtrl', ['$scope', 'Category', 'Film', function($scope, Category, Film) {
+    .controller('MainCtrl', ['$scope', 'Category', 'Film', 'CategoryCount', function($scope, Category, Film, CategoryCount) {
 
         $scope.alphabet = ['0-9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
             'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X',
@@ -14,7 +14,7 @@ angular.module('MyApp')
             $scope.headingTitle = char;
         };
 
-        $scope.filmCountByCategory = function(category) {
-            $scope.count = Film.query({category: category._id}).length;
+        $scope.filmCountByCategory = function(category_id) {
+            return CategoryCount.get({id: category_id});
         }
     }]);

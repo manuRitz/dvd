@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js | bunyan -o short",
     "test": "eslint . && mocha",
-    "nodemon": "nodemon -x \"npm start\"",
+    "nodemon": "nodemon -x \"npm start | bunyan -o short\"",
     "tdd": "nodemon -x \"npm test\""
   },
   "engines": {
