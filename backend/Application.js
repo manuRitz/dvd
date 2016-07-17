@@ -2,6 +2,8 @@ const Promise = require('bluebird');
 
 const config = require('../config');
 const Database = require('./dao/Database');
+const TheMovieDb = require('./dao/TheMovieDb');
+const RestClient = require('./RestClient');
 
 class Application {
 
@@ -9,6 +11,7 @@ class Application {
         this.config = config;
 
         this.db = new Database(config);
+        this.theMovieDb = new TheMovieDb(new RestClient('http://api.themoviedb.org'), config.THEMOVIEDB_KEY)
     }
 
     getInfo() {
@@ -62,6 +65,9 @@ class Application {
         return this.db.deleteFilm(id);
     }
 
+    searchTitle(title) {
+        return this.theMovieDb.searchTitle(title);
+    }
 }
 
 module.exports = Application;

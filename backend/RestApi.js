@@ -146,6 +146,10 @@ class RestApi {
             return app.deleteFilm(req.params.id);
         }));
 
+        server.get('api/film/search/:title', respond(function (req) {
+            return app.searchTitle(req.params.title);
+        }));
+
         var publicPath = path.resolve(__dirname, '..', 'public');
 
         server.get('/', restify.serveStatic({
