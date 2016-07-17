@@ -122,6 +122,10 @@ class RestApi {
             return app.deleteCategory(req.params.id);
         }));
 
+        server.get('/api/category/count/:id', respond(function (req) {
+            return app.getCategoryCount(req.params.id);
+        }));
+
         server.get('/api/film', respond(function (req) {
             return app.findFilm(req.params);
         }));
