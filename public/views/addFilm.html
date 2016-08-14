@@ -22,7 +22,7 @@
                                 <input class="form-control" type="text" name="title" ng-model="title"
                                        placeholder="Titel" required autofocus>
 
-                                <select class="form-control" ng-model="category" ng-options="category.id as category.category for category in categories">
+                                <select class="form-control" ng-model="category" ng-options="category.category for category in categories track by category.id">
                                 </select>
 
                                 <input class="form-control" type="text" name="number" ng-model="number"

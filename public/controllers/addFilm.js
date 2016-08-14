@@ -1,7 +1,15 @@
 angular.module('MyApp')
-    .controller('AddFilmCtrl', ['$scope', '$alert', 'Category', 'Film', function($scope, $alert, Category, Film) {
+    .controller('AddFilmCtrl', ['$scope', 'Category', 'Film', 'FilmSearch', function($scope, Category, Film, FilmSearch) {
         $scope.categories = Category.query();
+        console.log('MRX', $scope.categories);
 
+        $scope.searchFilm = function(title) {
+            var searchResult = FilmSearch.get({title: title});
+            searchResult.$promise.then(function (result) {
+                console.log(result);
+                return result;
+            });
+        };
 
         $scope.addFilm = function() {
             Film.save( {title: $scope.title, category: $scope.category, number: $scope.number} ,
