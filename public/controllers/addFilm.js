@@ -1,5 +1,5 @@
 angular.module('MyApp')
-    .controller('AddFilmCtrl', ['$scope', 'Category', 'Film', 'FilmSearch', function($scope, Category, Film, FilmSearch) {
+    .controller('AddFilmCtrl', ['$scope', '$alert', 'Category', 'Film', 'FilmSearch', function($scope, $alert, Category, Film, FilmSearch) {
         $scope.categories = Category.query();
         console.log('MRX', $scope.categories);
 
@@ -12,7 +12,7 @@ angular.module('MyApp')
         };
 
         $scope.addFilm = function() {
-            Film.save( {title: $scope.title, category: $scope.category, number: $scope.number} ,
+            Film.save( {title: $scope.title, category: $scope.category.category, number: $scope.number} ,
                 function() {
                     $scope.showName = '';
                     $scope.addForm.$setPristine();
